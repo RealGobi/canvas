@@ -41,10 +41,10 @@ c.stroke();
 }
  */
 
-let x = 200;
-let y = 200;
-let dx = 4;
-let dy = 4;
+let x = Math.random() * innerWidth;
+let y = Math.random() * innerHeight;
+let dx = (Math.random() - 0.5) * 8;
+let dy = (Math.random() - 0.5) * 8;
 let radius = 30;
 function animate() {
   requestAnimationFrame(animate);
