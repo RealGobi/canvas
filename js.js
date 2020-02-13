@@ -65,7 +65,12 @@ let mouse = {
 window.addEventListener('mousemove', function(e) {
   mouse.x = e.x;
   mouse.y = e.y;
-})
+});
+
+window.addEventListener('resize', () => {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+});
 function Circle(x, y, dx, dy, radius){
   this.x = x;
   this.y = y;
@@ -106,7 +111,7 @@ function Circle(x, y, dx, dy, radius){
 }
 
 let = circleArr = [];
-for (let i = 0; i < 100; i++) {
+for (let i = 0; i < 800; i++) {
 let radius = Math.random() * 5 + 1;
 let x = Math.random() * (innerWidth - radius * 2) + radius;
 let y = Math.random() * innerHeight;
